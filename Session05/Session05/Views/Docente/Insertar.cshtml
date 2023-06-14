@@ -1,0 +1,46 @@
+﻿<h2>Insertar Nuevos Docentes</h2>
+@using (Html.BeginForm("Insertar", "Docente", FormMethod.Post)) 
+{ 
+    <table>
+        <tr>
+            <td>@Html.Label("Nombre")</td>
+            <td>@Html.TextBox("nom")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Apellido")</td>
+            <td>@Html.TextBox("ape")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Dni")</td>
+            <td>@Html.TextBox("dni")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Especialidad")</td>
+            <td>
+                @Html.DropDownList("esp", new List<SelectListItem>
+                {
+                    new SelectListItem{Text = "Matematica", Value = "Matematica"},
+                    new SelectListItem{Text = "Idiomas", Value = "Idiomas"},
+                    new SelectListItem{Text = "Info", Value = "Informatica"},
+                    new SelectListItem{Text = "Bage", Value = "Bage"},
+                },"Seleccione especialidad ")
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Sueldo")</td>
+            <td>@Html.TextBox("sue")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Fin Reg")</td>
+            <td>@Html.TextBox("fingDate")</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+    }
+<p style="blue">
+    <strong>@ViewBag.rpta</strong>
+</p>

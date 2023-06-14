@@ -1,0 +1,30 @@
+﻿<h2>Insertar Nuevos Estudiantes</h2>
+@using (Html.BeginForm("Insertar", "Estudiante", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>@Html.Label("Nombre")</td>
+            <td>@Html.TextBox("nom")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Apellido")</td>
+            <td>@Html.TextBox("ape")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Telefono")</td>
+            <td>@Html.TextBox("tel")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Email")</td>
+            <td>@Html.TextBox("email")</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+}
+<p style="blue">
+    <strong>@ViewBag.rpta</strong>
+</p>

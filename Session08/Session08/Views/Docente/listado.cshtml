@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Session08.Models.Docente>
+
+<h2>listado de docente</h2>
+    
+<table class="table">
+    <tr>
+        <th>
+            ID Docente
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            DNI
+        </th>
+        <th>
+            Materia
+        </th>
+        <th>
+            Sueldo
+        </th>
+        <th>
+            Año (Salida)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ape)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.especie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sueldo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fin)
+        </td>
+    </tr>
+}
+
+</table>

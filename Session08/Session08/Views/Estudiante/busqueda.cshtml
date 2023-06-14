@@ -1,0 +1,23 @@
+﻿<h2>busqueda de estudiantes</h2>
+@using (Html.BeginForm("busqueda", "Estudiante", FormMethod.Post))
+{   
+    <table>
+        <tr>
+            <td>@Html.Label("Ingresar apellido")</td>
+            <td>@Html.TextBox("ape", null)</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Buscar" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+}
+<p style="color:darkmagenta">
+    <strong>Id: </strong> @ViewBag.id <br />
+    <strong>Nombre: </strong> @ViewBag.nomb <br />
+    <strong>Apelido: </strong> @ViewBag.ape <br />
+    <strong>Telefono: </strong> @ViewBag.tel <br />
+    <strong>Correo: </strong> @ViewBag.correo <br />
+</p>
+

@@ -1,0 +1,26 @@
+﻿<h2>busqueda de docente</h2>
+@using (Html.BeginForm("busqueda", "Docente", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>@Html.Label("Ingresar Dni")</td>
+            <td>@Html.TextBox("dni", null)</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Buscar" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+}
+<p style="color:darkmagenta">
+    <strong>Id: </strong> @ViewBag.id <br />
+    <strong>Nombre: </strong> @ViewBag.nomb <br />
+    <strong>Apelido: </strong> @ViewBag.ape <br />
+    <strong>DNI: </strong> @ViewBag.dni <br />
+    <strong>Materia: </strong> @ViewBag.especie <br />
+    <strong>Sueldo: </strong> @ViewBag.sueldo <br />
+    <strong>Año(Salida): </strong> @ViewBag.fin <br />
+</p>
+
+

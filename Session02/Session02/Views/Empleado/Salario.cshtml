@@ -1,0 +1,53 @@
+﻿
+<h2>Registro de Salario</h2>
+@using (Html.BeginForm("Salario", "Empleado", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>@Html.Label("Codigo")<br />
+            <td>@Html.TextBox("cod") </td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Nombre")<br /></td>
+            <td>@Html.TextBox("nom")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Apellido")<br /></td>
+            <td>@Html.TextBox("ape")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Email")<br /></td>
+            <td>@Html.TextBox("email")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Horas")<br /></td>
+            <td>@Html.TextBox("hora")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Tarifas")<br /></td>
+            <td>@Html.TextBox("tarifa")</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Subir" />
+            </td>
+        </tr>
+    </table>
+}
+<h3>Reporte de Notas</h3>
+<p style="color:darkblue">
+    Codigo:@ViewBag.cod <br />
+    Nombre:@ViewBag.nom <br />
+    Apellido:@ViewBag.ape <br />
+    Email:@ViewBag.email <br />
+    Horas:@ViewBag.hora <br />
+    Tarifas:@ViewBag.tarifa <br />
+</p>
+<hr />
+<p style="color:darkblue">
+    Suledo Bruto:@ViewBag.sueldoBruto <br />
+    Descuento:@ViewBag.desBruto <br />
+    Bonificacion familiar:@ViewBag.boniFamiliar <br />
+    Bonificacion Especial:@ViewBag.boniEsp <br />
+    Sueldo Neto:@ViewBag.salNeto <br />
+</p>

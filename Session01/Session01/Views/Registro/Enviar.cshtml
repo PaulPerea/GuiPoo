@@ -1,0 +1,18 @@
+﻿@using (Html.BeginForm("Enviar", "Registro", FormMethod.Get))
+{
+    <p>
+        @Html.Label("ID") <br />
+        @Html.TextBox("id")
+    </p>
+    <p>
+        @Html.Label("Nombre") <br />
+        @Html.TextBox("nombre") 
+    </p>
+    <p>
+        <input type="submit" value="Enviar" />
+    </p>
+}
+<p style="color:blueviolet">
+    ID: @ViewBag.id <br />
+    Nombre : @ViewBag.nombre
+</p>

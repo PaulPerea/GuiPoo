@@ -1,0 +1,41 @@
+﻿
+<h2>Registro de Calificaciones</h2>
+@using (Html.BeginForm("Calificaciones", "Alumno", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>@Html.Label("Codigo")<br />
+            <td>@Html.TextBox("codigo") </td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Nombre")<br /></td>
+            <td>@Html.TextBox("nombre")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Nota 1")<br /></td>
+            <td>@Html.TextBox("nt1")</td>
+        </tr>    
+        <tr>   
+            <td>@Html.Label("Nota 2")<br /></td>
+            <td>@Html.TextBox("nt2")</td>
+        </tr>  
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Calcular" />
+            </td>
+        </tr>
+    </table>
+}
+<h3>Reporte de Notas</h3>
+<p style="color:darkblue">
+    Codigo:@ViewBag.cod <br />
+    Nombre:@ViewBag.nom <br />
+    Nota 1:@ViewBag.n1 <br />
+    Nota 2:@ViewBag.n2 <br />
+</p>
+<hr />
+<p style="color:darkblue">
+    Promedio:@ViewBag.prom <br />
+    Condicion:@ViewBag.condi <br />
+</p>
+

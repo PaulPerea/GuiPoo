@@ -1,0 +1,38 @@
+﻿
+<h2>Registrar Docente</h2>
+@using (Html.BeginForm("Registrar", "Docente", FormMethod.Post))
+{
+    <p>
+        @Html.Label("Nombre") <br />
+        @Html.TextBox("noM")
+    </p>
+    <p>
+        @Html.Label("Apellido") <br />
+        @Html.TextBox("ap")
+    </p>
+    <p>
+        @Html.Label("DNI") <br />
+        @Html.TextBox("dni")
+    </p>
+    <p>
+        @Html.Label("Esp") <br />
+        @Html.TextBox("esp")
+    </p>
+    <p>
+        @Html.Label("Sueldo") <br />
+        @Html.TextBox("sue")
+    </p>
+    <p>
+        @Html.Label("Fin de Fecha") <br />
+        @Html.TextBox("fin")
+    </p>
+    <p>
+        <input type="submit" value="Guardar" />
+    </p>
+}
+
+<p style="color:red">
+    <strong>
+        @ViewBag.respuesta
+    </strong>
+</p>

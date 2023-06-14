@@ -1,0 +1,10 @@
+﻿<h2>Prueba de Conexion al Sql server</h2>
+@using (Html.BeginForm("Prueba", "Conexcion", FormMethod.Post))
+            {
+                <p>
+                    <input type="submit" value="Conectar" />
+                </p>
+            }
+<p style="color:red">
+    <strong>@ViewBag.rpta</strong>
+</p>

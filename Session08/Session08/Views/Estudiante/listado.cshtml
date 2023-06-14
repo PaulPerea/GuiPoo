@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Session08.Models.Estudiante>
+<h2>listado de estudiantes</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            Telefono
+        </th>
+        <th>
+            Correo
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idestud)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ape)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correo)
+        </td>
+    </tr>
+}
+
+</table>

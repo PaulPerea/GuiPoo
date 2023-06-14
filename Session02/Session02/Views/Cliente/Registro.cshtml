@@ -1,0 +1,29 @@
+﻿<h2>Registro de Clientes</h2>
+@using (Html.BeginForm("Registro", "Cliente", FormMethod.Post))
+{
+    <p>
+        @Html.Label("Codigo")<br />
+        @Html.TextBox("codigo")
+    </p>
+    <p>
+        @Html.Label("Nombre")<br />
+        @Html.TextBox("nombre")
+    </p>
+    <p>
+        @Html.Label("Apellido")<br />
+        @Html.TextBox("apellido")
+    </p>
+    <p>
+        @Html.Label("E-mail")<br />
+        @Html.TextBox("email")
+    </p>
+    <p>
+        <input type="submit" value="Registrar" />
+    </p>
+}
+<p style="color:brown">
+    <strong>Codigo: </strong>@ViewBag.codigo <br />
+    <strong>Nombre: </strong>@ViewBag.nombre <br />
+    <strong>Apellido: </strong>@ViewBag.apellido <br />
+    <strong>Email: </strong>@ViewBag.email
+</p>
